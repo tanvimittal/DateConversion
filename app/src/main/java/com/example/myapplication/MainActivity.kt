@@ -9,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
@@ -39,6 +40,12 @@ class MainActivity : AppCompatActivity() {
            val dateFormat = "yyyy/MM/dd"
             var sdf = SimpleDateFormat(dateFormat,Locale.JAPAN)
             seirekiDate.setText(sdf.format(cal.time))
+
+            var dateConversion = DateConversion()
+            var strWarekiDate = dateConversion.seirekiToWareki(sdf.format(cal.time))
+
+           val warekiDate = findViewById(R.id.warekiDate) as TextView
+           warekiDate.setText(strWarekiDate)
         }
 
         // Handler on Seireki Date

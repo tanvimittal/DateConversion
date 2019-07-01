@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:layout_gravity="bottom|end">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_height="wrap_content"
@@ -29,5 +29,10 @@
             android:id="@+id/seirekiDate"
             android:editable="false" android:focusable="false" android:gravity="center"
             android:layout_gravity="center" android:text="Select Date"/>
+    <TextView
+            android:layout_width="95dp"
+            android:layout_height="88dp" android:id="@+id/warekiDate"
+            android:layout_gravity="bottom|center"
+            android:text="Select Date"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
